@@ -13,6 +13,7 @@ Notebook introductorio para el diseño e implementación de **Agentes de Intelig
 | **Paso 3** | Configuración del entorno e importaciones |
 | **Paso 4** | Inicialización del modelo, herramientas y prueba de conexión |
 | **Paso 5** | Prueba de herramientas (`busca_web` y `multiplicar`) |
+| **Paso 6** | Agente científico con ArXiv (`tool_cientifica`) |
 
 ---
 
@@ -22,6 +23,7 @@ Notebook introductorio para el diseño e implementación de **Agentes de Intelig
 - [LangGraph](https://langchain-ai.github.io/langgraph/) — motor para flujos de trabajo basados en grafos con estados y ciclos
 - [Gemini 2.5 Flash](https://deepmind.google/technologies/gemini/) — modelo de lenguaje de Google vía `langchain-google-genai`
 - [Tavily Search](https://tavily.com/) — herramienta de búsqueda web en tiempo real
+- [ArXiv](https://arxiv.org/) — repositorio de artículos científicos de acceso abierto
 - [Google Cloud ADC](https://cloud.google.com/docs/authentication/application-default-credentials) — autenticación sin API key mediante credenciales de aplicación
 
 ---
@@ -75,6 +77,7 @@ TAVILY_API_KEY=tu-tavily-api-key
 |-------------|-------------|
 | `busca_web` | Realiza búsquedas en la web en tiempo real usando Tavily Search |
 | `multiplicar` | Multiplica dos números enteros |
+| `tool_cientifica` | Consulta artículos académicos en arXiv por tema o palabra clave |
 
 Las herramientas se vinculan al modelo con `llm.bind_tools(tools)`, permitiendo que el agente las invoque de forma autónoma según el contexto.
 
